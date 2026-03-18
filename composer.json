@@ -1,0 +1,27 @@
+{
+    "name": "mfd/container-cleanup",
+    "type": "typo3-cms-extension",
+    "version": "1.0.0",
+    "description": "Detects and removes unused container children in tt_content",
+    "license": "Proprietary",
+    "authors": [
+        {
+            "name": "MFD SEGGER Team",
+            "email": "segger@marketing-factory.de"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^13.4.26",
+        "b13/container": "^3.1.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mfd\\ContainerCleanup\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "container_cleanup"
+        }
+    }
+}

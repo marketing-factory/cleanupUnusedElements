@@ -1,0 +1,23 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Mfd\ContainerCleanup\:
+    resource: '../Classes/'
+    exclude:
+      - '../Classes/Task/ContainerCleanupTask.php'
+
+  Mfd\ContainerCleanup\Service\OrphanDetector:
+    public: true
+
+  Mfd\ContainerCleanup\Service\CleanupService:
+    public: true
+
+  Mfd\ContainerCleanup\Command\CleanupCommand:
+    tags:
+      - name: console.command
+        command: 'container-cleanup:cleanup'
+        description: 'Detect and optionally soft-delete unused container children in tt_content'
+        schedulable: false

@@ -3,16 +3,24 @@
     "type": "typo3-cms-extension",
     "version": "1.0.0",
     "description": "Detects and removes unused container children in tt_content",
-    "license": "Proprietary",
+    "license": "GPL-2.0-or-later",
     "authors": [
         {
-            "name": "MFD SEGGER Team",
-            "email": "segger@marketing-factory.de"
+            "name": "Ingo Schmitt",
+            "role": "Developer",
+            "email": "ingo.schmitt@marketing-factory.de",
+            "homepage": "https://www.marketing-factory.de"
         }
     ],
+    "support": {
+        "issues": "https://github.com/marketing-factory/cleanupUnusedElements/issues",
+        "source": "https://github.com/marketing-factory/cleanupUnusedElements",
+        "security": "https://github.com/marketing-factory/cleanupUnusedElements/blob/main/SECURITY.md"
+    },
     "require": {
-        "typo3/cms-core": "^13.4.26",
-        "b13/container": "^3.1.10"
+        "typo3/cms-core": "^13.4.26 || ^14.3",
+        "typo3/cms-scheduler": "^13.4.26 || ^14.3",
+        "b13/container": "^3.1.10 || ^4.0"
     },
     "autoload": {
         "psr-4": {
